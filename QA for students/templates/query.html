@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Hub for Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Q&amp;A Hub for Students</h1>
+    </header>
+    
+    <section class="main-section">
+        <form method="post" action="/answer" enctype="multipart/form-data">
+            <label for="question">Enter your question:</label>
+            <input type="text" id="question" name="question" required>
+            <br>
+
+            <label for="context">Or upload a .txt file:</label>
+            <input type="file" name="context_file">
+            <br>
+
+            <button type="submit">Get Answer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Q&amp;A Hub for Students. All rights reserved.</p>
+    </footer>
+</body>
+</html>

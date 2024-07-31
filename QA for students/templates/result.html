@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Q&amp;A Hub for Students</h1>
+    </header>
+
+    <section class="main-section">
+        <h2>Question: {{ question }}</h2>
+        <h3>Answer: {{ answer_map.answer }}</h3>
+        <p>Top Answers:</p>
+        <ul>
+            {% for answer in answer_map.answers %}
+                <li>{{ loop.index }}) {{ answer }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Q&amp;A Hub for Students. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
